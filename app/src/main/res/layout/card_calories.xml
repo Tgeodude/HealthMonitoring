@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_background"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvCaloriesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Калории"
+        android:textSize="16sp"
+        android:textColor="@color/text_color_primary"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <FrameLayout
+        android:id="@+id/progress"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/tvCaloriesTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <com.example.healthmonitoring.CircleProgressView
+            android:id="@+id/pbCalories"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tvProgressText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="410 \nккал"
+            android:textSize="24sp"
+            android:textColor="@color/text_color_primary" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvCaloriesGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1480 ккал дневная цель"
+        android:textSize="14sp"
+        android:textColor="@color/text_color_secondary"
+        android:layout_below="@id/progress"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+</RelativeLayout>
